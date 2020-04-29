@@ -34,7 +34,7 @@ namespace HelloWord2.Controllers
 
             _sqlConnectorStr["Data Source"] = "(local)";
             _sqlConnectorStr["integrated Security"] = true;
-            _sqlConnectorStr["Initial Catalog"] = "AdventureWorks2014";
+            _sqlConnectorStr["Initial Catalog"] = "AdventureWorks2017";
             _sqlConnectorStr.UserID = "sa";
             _sqlConnectorStr.Password = "";
             //_sqlConnectorStr["UserID"] = "sa";
@@ -64,16 +64,6 @@ namespace HelloWord2.Controllers
             return View(s);
         }
 
-        //protected ViewResult Index()
-        //{
-        //    Simple1 s = new Simple1();
-
-        //    s._Age = 10;
-        //    s._Name = "Souffle";
-
-        //    ViewBag.Greeting = ("<p> C'est moi: " + s._Name + " et puis l'age: " + s._Age + "</p>");
-        //    return View(s);
-        //}
         public IActionResult Privacy()
         {
             return View();

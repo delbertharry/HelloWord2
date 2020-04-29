@@ -29,9 +29,14 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container">   
         <main role="main" class="pb-3">
-            @RenderBody()
+            <button id-="but1" type="submit" value="0">ClickMe</button>
+            <input type="button" id="bouton" value="Cliqué Ici" />
+            <input type="button" id="bouton2" value="Cliqué Moi" />
+            <input type="button" id="bouton3" value="Cliqué Ici 3" />
+            <input type="button" id="bouton4" value="Cliqué Moi 5" />
+                @RenderBody()
         </main>
     </div>
 
@@ -43,6 +48,32 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        var bton = $("#bouton").text();
+
+        $(function () {
+            $('#bouton').click(function () {
+                $('#message1').html('Jeux des Questions Biblique');
+            });
+
+            $('#bouton2').click(function () {
+                $('#message1').html('Pa fè mwen sa');
+
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $('#bouton3').click(function () {
+                $('#message1').html('Jeux des Questions Biblique pour les enfants');
+            });
+
+            $('#bouton4').click(function () {
+                $('#message1').html('Pa fè mwen sa jwé konsa');
+
+            });
+        });
+    </script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
