@@ -1,0 +1,100 @@
+﻿@model HelloWord2.Models.Simple1
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>undefined</title>
+    <meta name="generator" content="Google Web Designer 7.1.1.1210">
+    <style type="text/css" id="gwd-text-style">
+
+        p {
+            margin: 0px;
+        }
+
+        h1 {
+            margin: 0px;
+        }
+
+        h2 {
+            margin: 0px;
+        }
+
+        h3 {
+            margin: 0px;
+        }
+    </style>
+    <style type="text/css">
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+
+        body {
+            background-color: transparent;
+            transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform-style: preserve-3d;
+        }
+
+        .gwd-p-1kkx {
+            position: absolute;
+            width: 693px;
+            height: 40px;
+            transform-origin: 196.5px 20px 0px;
+            text-align: center;
+            font-size: 34px;
+            background-image: none;
+            background-color: rgb(203, 128, 237);
+            color: rgb(234, 226, 226);
+            top: 226px;
+            left: 203px;
+        }
+
+        .gwd-div-1kid {
+            position: absolute;
+            width: 842px;
+            height: 70px;
+            left: 9px;
+            top: 91px;
+        }
+    </style>
+</head>
+
+<body class="htmlNoPages">
+    <h1 class="display-4">Welcome @{Console.Write("<p>Hello World</p>");} </h1>
+    <p class="gwd-p-1kkx">Jeux des Questions Biblique</p>
+    <div class="gwd-div-1kid">
+        @if (@Model._Age > 10)
+        {
+            <p>Mon nom : @Model._Name et mon age : @Model._Age</p>
+        }
+        else
+        {
+            <p>Mon nom : @Model._Name et mon jeune age : @Model._Age</p>
+        }
+
+        @{
+            var i = 0;
+
+            while (i < 5)
+            {
+                <p>@i </p>
+                i = i + 1;
+            }
+
+            foreach (String a in @Model.values)
+            {
+                <p>@a.ToString()</p>
+            }
+        }
+    </div>
+</body>
+
+</html>
